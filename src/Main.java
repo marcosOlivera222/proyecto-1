@@ -5,11 +5,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese la cantidad de estudiantes: ");
         int numEstudiantes = scanner.nextInt();
-        float numeros []= new float [5];
+        int numeros [],grado [],complemeto [];
+
+        numeros = new int [5];
+        grado = new int [5];
+        complemeto = new int [10];
+
 
         for (int i = 0; i < numEstudiantes; i++) {
-            System.out.print("Ingrese la edad del estudiante " + (i + 1) + ": ");
+            System.out.print("Ingrese la edad  del estudiante " + (i + 1) + ": ");
             numeros[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < numEstudiantes; i++) {
+            System.out.print("Ingrese el grado del estudiante " + (i + 1) + ": ");
+            grado [i]= scanner.nextInt();
         }
         int promedioMayores =0;
         int sumaMayores = 0;
@@ -39,8 +48,10 @@ public class Main {
                 cantidadCinco++;
             }
         }
+
         System.out.println("El promedio de edad de los estudiantes mayores a 5 años es: " + promedioMayores);
         System.out.println("La media de edad de los estudiantes menores a 5 años es: " + mediaMenores);
         System.out.println("La cantidad de estudiantes que tienen 5 años exactamente es: " + cantidadCinco);
+
     }
 }
